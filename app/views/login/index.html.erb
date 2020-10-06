@@ -4,6 +4,7 @@
   <!-- ユーザーがログインしていた時の処理 -->
 
   <h4> メールアドレス： <%= current_user.email %> </h4>
+  <%= link_to 'New Profile', new_profile_path %>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   devise_for :users
   root 'login#index' # ここを追記します
   get 'login/index' # 自動で設定されたルーティング
