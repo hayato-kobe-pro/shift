@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_134535) do
+ActiveRecord::Schema.define(version: 2020_10_07_013945) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2020_10_06_134535) do
     t.boolean "is_enable"
     t.string "thumbnail"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "room_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "room_id"
+    t.string "room_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

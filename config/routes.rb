@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/show'
   resources :profiles
   devise_for :users
   root 'login#index' # ここを追記します

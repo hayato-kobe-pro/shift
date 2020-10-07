@@ -31,12 +31,21 @@
     <%= form.text_field :thumbnail %>
   </div>
 
+  <%= form.fields_for :rooms do |f| %>
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.label :room_id %>
+    <%= form.number_field :room_id%>
   </div>
+  <div class="field">
+    <%= form.label :room_name %>
+    <%= form.text_field :room_name%>
+  </div>
+  <% end %>
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+
